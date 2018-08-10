@@ -6,8 +6,6 @@ const passport = require('passport');
 require('./models/User');
 require('./services/passport');
 
-
-
 mongoose.connect(keys.mongoURI);
 
 const app = express();
@@ -15,7 +13,7 @@ const app = express();
 
 app.use(
   cookieSession({
-    maxAge: 30 * 60 * 24 * 1000
+    maxAge: 30 * 60 * 24 * 1000,
     keys: [keys.cookieKey]
   })
 );
