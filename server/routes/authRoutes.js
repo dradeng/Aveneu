@@ -6,7 +6,7 @@ module.exports = (app) => {
     res.render('Register');
   });
 
-  app.post('/register', function(req, res) {
+  app.post('/register', (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const username = req.body.username;
@@ -34,14 +34,14 @@ module.exports = (app) => {
         password: password
       });
 
-      bcrypt.getSalt(10, function(err, salt) {
+      bcrypt.getSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, function(err, hash) {
           if(err){
             console.log(err);
 
           }
           newUser.password = hash
-          newUser.save(function(err){
+          newUser.save( (err) => {
             if(err){
               console.log(err);
               return;
@@ -71,7 +71,7 @@ module.exports = (app) => {
   });
 
   //Logout
-  app.get('/logout', function(req, res){
+  app.get('/logout', (req, res) => {
     req.logout();
     req.flash('success', 'you are logged out');
     res.redirect('/users/login');
