@@ -1,10 +1,9 @@
 const passport = require('passport');
 const bcrypt = require('bcryptjs');
-
 module.exports = (app) => {
 
   app.get('/register', (req, res) => {
-    res.render('register');
+    res.render('Register');
   });
 
   app.post('/register', function(req, res) {
@@ -56,7 +55,25 @@ module.exports = (app) => {
     }
   });
 
+//Login Form
+
   app.get('/login', (req, res) => {
     res.render('login');
+  });
+
+  //Login process
+  app.post('/login', (req, res) => {
+    passport.authenticate('local', {
+      successRedirect:'/',
+      failuareRedirect:'/users/login',
+      failerFlash: true
+    })(req,res,next);
+  });
+
+  //Logout
+  app.get('/logout', function(req, res){
+    req.logout();
+    req.flash('success', 'you are logged out');
+    res.redirect('/users/login');
   });
 };
