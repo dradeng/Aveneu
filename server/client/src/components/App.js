@@ -6,8 +6,6 @@ const passport = require('passport');
 
 
 
-
-
 const App = () => {
   return (
     <div>
