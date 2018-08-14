@@ -4,12 +4,17 @@ import { connect } from 'react-redux';
 
 const passport = require('passport');
 
-
+const Header = () => <h2>Header</h2>
 
 const App = () => {
   return (
     <div>
-      hi there
+      <BrowserRouter>
+        <div>
+          <Route path="" component={Header} />
+        </div>
+      </BrowserRouter>
+
     </div>
   );
 };
