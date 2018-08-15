@@ -11,6 +11,8 @@ function appStatus(
         passwordReset: false,
         emailExists: false,
         showSignUp: false,
+        showSignIn: false,
+
         day: new Date(),
     },
     action,
@@ -36,6 +38,14 @@ function appStatus(
         case types.SHOW_SIGNUP_MODAL:
             return Object.assign({}, state, {
                 showSignUp: true,
+            });
+        case types.SHOW_SIGNIN_MODAL:
+            return Object.assign({}, state, {
+                showSignIn: true,
+            });
+        case types.CLOSE_SIGNIN_MODAL:
+            return Object.assign({}, state, {
+                showSignIn: false,
             });
         case types.CLOSE_SIGNUP_MODAL:
             state = Object.assign({}, state);

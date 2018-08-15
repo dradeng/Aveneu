@@ -48,6 +48,8 @@ const styles = {
 const mapDispatchToProps = dispatch => ({
     onShowSignUp: () =>
         dispatch({ type: 'SHOW_SIGNUP_MODAL'}),
+    onShowSignIn: () =>
+        dispatch({ type: 'SHOW_SIGNIN_MODAL'}),
 
 });
 
@@ -55,7 +57,7 @@ class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.showSignUp  = () => this.props.onShowSignUp();
-
+        this.showSignIn = () => this.props.onShowSignIn();
     }
 
     render() {
@@ -76,10 +78,11 @@ class Navbar extends React.Component {
                         Sublet
                         </p>
                     </div>
-                    <div style={styles.navItem}>
-                        <button  onClick={this.showSignUp}>
+                    <div onClick={this.showSignUp} style={styles.navItem}>
                             Sign Up
-                        </button>
+                    </div>
+                    <div onClick={this.showSignIn} style={styles.navItem}>
+                        Sign In
                     </div>
                 </div>
             </div>

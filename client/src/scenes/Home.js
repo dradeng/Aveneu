@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar/Navbar';
 import SignUpModal from '../components/SignUp/SignUpModal';
 
 import { connect } from 'react-redux';
+import SignInModal from "../components/SignIn/SignInModal";
 
 const styles = {
     image: {
@@ -47,7 +48,7 @@ class Home extends React.Component {
             <div style={styles.container}>
                 <div style={styles.image}>
                     <SignUpModal showModal={this.props.showSignUp}/>
-
+                    <SignInModal showModal={this.props.showSignIn}/>
                     <Navbar />
                     <div style={styles.contetParent}>
                 <div style={styles.content}>
@@ -69,6 +70,7 @@ const mapStateToProps = state => {
         signUpSuccess: state.appStatus.signUpSuccess,
         passwordLink: state.appStatus.passwordLink,
         showSignUp: state.appStatus.showSignUp,
+        showSignIn: state.appStatus.showSignIn,
     };
 };
 
