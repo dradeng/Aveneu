@@ -10,7 +10,7 @@ import storage from 'redux-persist/lib/storage';
 import Routes from './Routes';
 import reducers from './reducers';
 
-
+import './App.css';
 
 /* @TODO: make this applicable to us */
 const persistConfig = {

@@ -17,6 +17,7 @@ const styles = {
         background: 'linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(' + "https://i.redditmedia.com/9SxNVBakOD2zr4lRgfr1W3HZdPqiyaDjguUaCTVnPv4.jpg?s=20b4dd42c639281940522560d4b70067" + ') no-repeat center center'
     },
     container: {
+        fontFamily: 'myriad-arabic',
 
     },
     content: {

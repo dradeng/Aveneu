@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 import Home from './scenes/Home';
+import PropertyView from './scenes/PropertyView';
 
 const styles = {
     container: {
@@ -42,7 +43,7 @@ class Routes extends React.Component {
                 <div>
                     <Route path="/" exact component={Home} />
                     <Route path="/sublet/:id/" exact component={Home} />
-                    <Route exact path="/login" component={Home} />
+                    <Route exact path="/search" component={PropertyView} />
                 </div>
             </Router>
         );
