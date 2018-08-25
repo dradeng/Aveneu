@@ -27,7 +27,7 @@ const styles = {
     pageContainer: {
         flex: 1,
         position: 'relative',
-        flexGrow: 1 /*ensures that the container will take up the full height of the parent container*/,
+        flexGrow: 1, // ensures that the container will take up the full height
         overflowY: 'auto',
     },
     notifications: {
@@ -56,19 +56,22 @@ const styles = {
     },
 };
 
+
 function LoggedInComponent(WrappedComponent) {
     function wrapper(props) {
 
         return (
-            <div style={styles.container}>
 
-                <LoggedInNavBar />
-                <div style={styles.mainContainer}>
-                    <div style={styles.pageContainer}>
-                      <WrappedComponent />
+                <div style={styles.container}>
+                    <div style={styles.left}>
+                        <LoggedInNavBar style={styles.statusContainer}/>
+                    </div>
+                    <div style={styles.mainContainer}>
+                        <div style={styles.pageContainer}>
+                          <WrappedComponent />
+                        </div>
                     </div>
                 </div>
-            </div>
         );
     }
     const mapStateToProps = state => {

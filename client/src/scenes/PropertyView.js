@@ -2,7 +2,7 @@ import React from 'react';
 import LoggedInComponent from '../components/LoggedInComponent/LoggedInComponent';
 import Navbar from '../components/Navbar/Navbar';
 import SignUpModal from '../components/SignUp/SignUpModal';
-
+import SplitSearch from '../components/Search/SplitSearch';
 import { connect } from 'react-redux';
 import SignInModal from "../components/SignIn/SignInModal";
 
@@ -12,13 +12,15 @@ const styles = {
         display: 'absolute',
         alignItems: 'center',
         zIndex: 0,
-        justifyContent: 'center',
-        backgroundSize: 'cover',
+        overflowX: 'hidden',
+
 
     },
     container: {
         fontFamily: 'myriad-arabic',
-        overflow: 'auto',
+        overflowX: 'hidden',
+        overflowY: 'hidden',
+        minHeight: 100 + 'vh',
         height: 'auto',
         padding: '.5rem',
         marginBottom: '10%',
@@ -28,7 +30,6 @@ const styles = {
         flexDirection: 'row',
         display: 'flex',
         width: '100'+'%',
-        flex: 1,
     },
     thumnails: {
         width: '50%',
@@ -42,20 +43,19 @@ function PropertyView() {
 
     return (
         <div style={styles.container}>
-            <div style={styles.image}>
                 <div className="container-fluid" style={styles.content}>
-                    <div className="col-sm-7">
+                    <div  className="col-sm-5">
+
                     <h3> Find your new place </h3>
-                        <h3> Find your new place </h3>
 
                     </div>
                     <div  className="col-sm-5">
-                        <h3 style={{color: '#000000'}}> Find your new place </h3>
-                        <h3> Find your new place </h3>
 
                     </div>
                 </div>
-            </div>
+            <SplitSearch/>
+
+
         </div>
     );
 
