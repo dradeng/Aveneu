@@ -21,6 +21,7 @@ const styles = {
         overflowX: 'hidden',
         overflowY: 'hidden',
         minHeight: 100 + 'vh',
+        backgroundColor:'#f7f7f7',
         height: 'auto',
         padding: '.5rem',
         marginBottom: '10%',
@@ -36,23 +37,20 @@ const styles = {
     },
     map: {
         width: '50%',
-    }
+    },
+    searchHeader: {
+        backgroundColor: '#FFFFFF',
+        width: '100%',
+        top: 0,
+        padding: 5,
+    },
 
 }
 function PropertyView() {
 
     return (
         <div style={styles.container}>
-                <div className="container-fluid" style={styles.content}>
-                    <div  className="col-sm-5">
 
-                    <h3> Find your new place </h3>
-
-                    </div>
-                    <div  className="col-sm-5">
-
-                    </div>
-                </div>
             <SplitSearch/>
 
 

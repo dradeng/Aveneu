@@ -7,6 +7,7 @@ const styles = {
         height: 'auto',
         margin: '10px',
         backgroundColor: 'white',
+        boxShadow:'0 3px 6px 0 rgba(0, 0, 0, 0.16)',
         cursor: 'pointer',
     },
     photoContainer: {
@@ -20,22 +21,20 @@ const styles = {
     details: {
         display: 'block',
         color: 'rgb(72, 72, 72) !important',
-
+        padding: 10,
     },
     rooms: {
         color: 'rgb(72, 72, 72) !important',
         fontSize: '12px',
-        fontWeight: 800,
         letterSpacing: 'normal !important',
-        lineHeight: 16,
-        marginTop: 8,
-        marginBottom: 0,
+
     },
     name: {
         fontSize: '16px !important',
         lineHeight: '22px !important',
         letterSpacing: 'normal !important',
         fontWeight: '800 !important',
+
         margin: '0 0 3px 0',
     },
     price: {
@@ -58,14 +57,14 @@ class PropertyThumbnail extends React.Component {
                 <div style={styles.photoContainer}>
                    <img style={styles.photo} src="https://i.ytimg.com/vi/9-dIdFXeFhs/maxresdefault.jpg"/>
                 </div>
-                <div styles={styles.details}>
-                    <div  styles={styles.rooms}>
+                <div style={styles.details}>
+                    <div  style={styles.rooms}>
                         1 ROOMS
                     </div>
-                    <div styles={styles.name}>
+                    <div style={styles.name}>
                         <h1>Jacob </h1>
                     </div>
-                    <div styles={styles.price}>
+                    <div style={styles.price}>
                         $10 per night
                     </div>
 
