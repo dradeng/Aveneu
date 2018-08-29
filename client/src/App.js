@@ -12,6 +12,15 @@ import reducers from './reducers';
 
 import './App.css';
 
+/**
+DRADENS ADDED CODE
+**/
+const mongoose = require('mongoose');
+//const config = require('../config/database');
+//mongoose.connect(config.database);
+//const db = mongoose.connection;
+//END OF DRADENS CODE
+
 /* @TODO: make this applicable to us */
 const persistConfig = {
     key: 'root',
