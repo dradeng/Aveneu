@@ -1,0 +1,24 @@
+{
+  "name": "aveneu",
+  "version": "1.0.0",
+  "description": "MongoDB/Express.js/React/Node.js stack for subletting properties worldwide",
+  "main": "index.js",
+  "dependencies": {
+    "mongoose": "^5.2.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dradeng/Aveneu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dradeng/Aveneu/issues"
+  },
+  "homepage": "https://github.com/dradeng/Aveneu#readme"
+}
