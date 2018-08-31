@@ -3,8 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 
 import { connect } from 'react-redux';
-import Home from './scenes/Home';
-import PropertyView from './scenes/PropertyView';
+import Home from '../scenes/Home';
+import PropertyView from '../scenes/PropertyView';
 
 const styles = {
     container: {
