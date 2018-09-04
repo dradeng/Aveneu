@@ -8,8 +8,7 @@ const styles = {
         display: 'flex',
         color: 'rgb(72, 72, 72) !important',
         padding: '25px 0 0 0',
-        height: '100vh',
-        overflow: 'auto',
+
     },
     rightContent: {
         display: 'flex',
@@ -92,7 +91,8 @@ class PropertyView extends React.Component {
        // let { home, homeId, fetchHome } = this.props;
 
         return (
-            <div>
+            <div style={{height: '100vh',
+                overflow: 'auto',}}>
                 <div style={styles.photoContainer}>
                     <img style={styles.photo} src={"https://i.ytimg.com/vi/9-dIdFXeFhs/maxresdefault.jpg"}/>
                 </div>
