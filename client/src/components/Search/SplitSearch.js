@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 import PropertyThumbnail from '../PropertyThumbnail/PropertyThumbnail.js';
 import Map from '../Map/Map.js';
 const styles = {
@@ -44,7 +46,9 @@ class SplitSearch extends React.Component {
                 padding: '0 13px 13px 13px'}}>
                 <div style={styles.leftHalf}>
                     <div style={styles.propertyContainer}>
+                        <NavLink to="/sublet/1">
                     <PropertyThumbnail/>
+                        </NavLink>
                     <PropertyThumbnail/>
                         <PropertyThumbnail/>
                         <PropertyThumbnail/>
