@@ -13,14 +13,52 @@ const styles = {
     rightContent: {
         display: 'flex',
         flexWrap: 'wrap',
-        width: '45%', // margin: 0 0 0 80px;
+        width: '55%', // margin: 0 0 0 80px;
+    },
+    price: {
+        height: '40px',
+        width: '85%',
+        padding: '20px 0 24px 0',
+        borderBottom: '1px solid #EBEBEB',
+    },
+    iconContainer: {
+        width: '6%',
+        display: 'flex',
+        justifyContent: 'center',
+        padding: '0 5px 0 0'
+    },
+    dateContainer: {
+        padding: '20px 0 0 0',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        width: '85%'
+
+        },
+    priceText: {
+        fontSize: '24px',
+        fontWeight: 800
+    },
+    perNight: {
+        fontSize: '24px',
+        fontWeight: 300,
+        padding: '0 0 1px 0'
+
+    },
+    listContainer:  {
+        width: '100%',
+        display: 'flex',
+        fontWeight: 400,
+        color: '#727272 !important',
+        padding: '0 0 25px 0'
     },
     leftContent: {
         height: '100%',
         display: 'flex',
-        justifyContent: 'flex-end',
+        justifyContent: 'flex-start',
         flexWrap: 'wrap',
-        width: '55%',
+        width: '40%',
+        marginLeft: '10%'
     },
     photoContainer: {
         display: 'flex',
@@ -45,6 +83,13 @@ const styles = {
         margin: '0 0 24px 0'
 
 },
+    labelContainer: {
+        width: '100%',
+        margin: '0 0 16px 0',
+        fontSize: '16px !important',
+        lineHeight: '22px !important',
+        fontWeight: 800
+    },
     photo: {
         maxWidth: '100%',
         flexShrink: 0,
@@ -56,8 +101,7 @@ const styles = {
         width: '65%',
     },
     map: {
-        display: 'block',
-        width: '65%',
+        width: '50%',
     },
     headlineInfo: {
         display: 'flex',
@@ -114,7 +158,7 @@ class PropertyView extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div style={{display: 'flex',padding: 0}}>
+                            <div style={styles.listContainer}>
                                 <div style={{padding: '10px 8px 20px 0'}}>
                                     <span><i className="fas fa-users fa-xs"></i></span>
                                     <span> 2 guests</span>
@@ -147,24 +191,24 @@ class PropertyView extends React.Component {
                             </div>
                         </div>
                         <div style={styles.amenitiesContainer}>
-                            <div className="label-container">
+                            <div style={styles.labelContainer}>
                                 <div>
                                     <span>Amenities</span>
                                 </div>
                             </div>
-                            <div className="amenities">
+                            <div style={{width: '50%'}}>
                                 <ul>
-                                    <div className="list-container">
-                                        <div className="icon-container">
+                                    <div style={styles.listContainer}>
+                                        <div style={styles.iconContainer}>
                                             <i className="fas fa-wifi fa-xs"></i>
                                         </div>
-                                        <li>Wifi</li>
+                                        <li >Wifi</li>
                                     </div>
                                     <div className="list-container">
                                         <div className="icon-container">
                                             <i className="fas fa-utensils fa-xs"></i>
                                         </div>
-                                        <li>Kitchen</li>
+                                        <li >Kitchen</li>
                                     </div>
                                     <div className="list-container">
                                         <div className="icon-container">
@@ -174,13 +218,13 @@ class PropertyView extends React.Component {
                                     </div>
                                 </ul>
                             </div>
-                            <div className="amenities">
+                            <div style={{width: '50%'}}>
                                 <ul>
-                                    <div className="list-container">
-                                        <div className="icon-container">
+                                    <div style={styles.listContainer}>
+                                        <div style={styles.iconContainer}>
                                             <i className="fas fa-car fa-xs"></i>
                                         </div>
-                                        <li>Parking</li>
+                                        <li >Parking</li>
                                     </div>
                                     <div className="list-container">
                                         <div className="icon-container">
@@ -201,19 +245,17 @@ class PropertyView extends React.Component {
                             <div className="review-button-container">
                             </div>
                         </div>
-                        <div style={styles.map}>
-                            <Map styles={{height: '40vh',display: 'flex'}}
-                            />
-                        </div>
+
                     </div>
                     <div style={styles.rightContent}>
                         <div className="reservation-container">
-                            <div className="price-container">
-                                <div className="price">
-                                    <div className="value">
+                            <div style={styles.price}>
+                                <div >
+                                    <div style={styles.priceText}>
                                         $1000
                                     </div>
-                                    <div className="word">
+
+                                    <div style={styles.perNight}>
                                         &nbsp; per night
                                     </div>
                                 </div>
@@ -229,8 +271,8 @@ class PropertyView extends React.Component {
                                 </div>
                             </div>
                             <form >
-                                <div className="date-container">
-                                    <div className="date-label">
+                                <div style={styles.dateContainer}>
+                                    <div style={styles.labelContainer}>
                                         <div>
                                             <span>Dates</span>
                                         </div>
@@ -274,6 +316,16 @@ class PropertyView extends React.Component {
                             </div>
                         </div>
                     </div>
+
+                </div>
+                <div style={{ height: '90%',
+                    width: '40%'}}>
+                    <Map  containerStyle={{
+                        height: "50vw",
+                        width: "50vw",
+                        display: 'relative',
+
+                    }}/>
                 </div>
             </div>
         );
